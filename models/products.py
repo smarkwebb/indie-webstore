@@ -1,4 +1,4 @@
-from app import db
+from models.db import db
 
 
 class Product(db.Model):

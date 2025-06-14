@@ -4,27 +4,27 @@
         "description": "Sample item 1",
         "image_path": "static/item1.png",
         "price": "1.99",
-        "impact": "Low"
+        "env_impact": "Low"
     },
     {
         "name": "Item 2",
         "description": "Sample item 2",
         "image_path": "static/item2.png",
         "price": "2.99",
-        "impact": "Medium"
+        "env_impact": "Medium"
     },
     {
         "name": "Item 3",
         "description": "Sample item 3",
         "image_path": "static/item3.png",
         "price": "5.99",
-        "impact": "High"
+        "env_impact": "High"
     },
     {
         "name": "Item 4",
         "description": "Sample item 4",
         "image_path": "static/item4.png",
         "price": "10.99",
-        "impact": "Very High"
+        "env_impact": "Very High"
     }
 ]

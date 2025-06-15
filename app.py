@@ -19,10 +19,10 @@ def route_index():
     return render_template("index.html", products=products)
 
 
-@app.route("/product/<productId>")
-def route_product(productId):
+@app.route("/product/<int:id>")
+def route_product(id):
     products = Product.query.all()
-    return render_template("product.html", product=products[productId])
+    return render_template("product.html", product=products[id - 1])
 
 
 if __name__ == "__main__":

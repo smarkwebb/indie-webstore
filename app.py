@@ -25,5 +25,20 @@ def route_product(id):
     return render_template("product.html", product=products[id - 1])
 
 
+@app.route("/basket")
+def route_basket():
+    return render_template("basket.html")
+
+
+@app.route("/checkout")
+def route_checkout():
+    return render_template("checkout.html")
+
+
+@app.route("/account")
+def route_account():
+    return render_template("account.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)

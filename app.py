@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from models.products import Product
-from utils.data_reader import get_products
+from utils.data_reader import read_json
 from utils.db_tools import fill_db
 from models.db import db
 
@@ -10,7 +10,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.sqlite3"
 db.init_app(app)
 
 with app.app_context():
-    fill_db(get_products(), Product)
+    fill_db(read_json("./data/products.json"), Product)
 
 
 @app.route("/")

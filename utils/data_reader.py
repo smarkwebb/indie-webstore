@@ -1,8 +1,8 @@
 import json
 
 
-def get_products():
-    with open("./data/products.json", "r") as file:
+def read_json(path):
+    with open(path, "r") as file:
         data = json.load(file)
 
     return data

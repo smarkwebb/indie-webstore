@@ -1,8 +1,7 @@
 from flask import Flask, render_template
-from models.products import Product
 from utils.data_reader import read_json
 from utils.db_tools import fill_db
-from models.db import db
+from models.db import db, Users, Product, Link, Basket
 
 
 app = Flask(__name__)
@@ -19,10 +18,10 @@ def route_index():
     return render_template("index.html", products=products)
 
 
-@app.route("/product/<int:id>")
-def route_product(id):
+@app.route("/product/<int:product_id>")
+def route_product(product_id):
     products = Product.query.all()
-    return render_template("product.html", product=products[id - 1])
+    return render_template("product.html", product=products[product_id - 1])
 
 
 @app.route("/basket")

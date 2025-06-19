@@ -50,10 +50,14 @@ def register():
         password = request.form["password"]
 
         with app.app_context():
-            db.session.add(Users(username=username, password=password))
-            db.session.commit()
+            user = Users.query.filter_by(username=username).first()
 
-        resp = make_response("Logged in.")
+            if user:
+                resp = make_response("User already exists.")
+            else:
+                db.session.add(Users(username=username, password=password))
+                db.session.commit()
+                resp = make_response("Logged in.")
     return resp
 
 

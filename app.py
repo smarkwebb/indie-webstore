@@ -57,7 +57,7 @@ def register():
             else:
                 db.session.add(Users(username=username, password=password))
                 db.session.commit()
-                resp = make_response("Logged in.")
+                resp = make_response("Account created.")
     return resp
 
 
@@ -78,6 +78,7 @@ def login():
                 resp = make_response("User does not exist.")
             elif user.password == password:
                 resp = make_response("Welcome User!")
+                resp.set_cookie("username", username)
             else:
                 resp = make_response("Invalid username or password.")
         return resp

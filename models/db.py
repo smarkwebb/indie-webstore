@@ -21,18 +21,10 @@ class Product(db.Model):
     env_impact = db.Column(db.String(20))
 
 
-class Link(db.Model):
-    __tablename__ = "link"
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"), primary_key=True)
-    basket_id = db.Column(
-        db.Integer, db.ForeignKey("baskets.basket_id"), primary_key=True
-    )
-
-
 class Basket(db.Model):
     __tablename__ = "baskets"
-    id = db.Column(db.Integer, primary_key=True)
-    basket_id = db.Column(db.Integer, nullable=False)
+    basket_id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, nullable=False)
     product_id = db.Column(
         db.Integer, db.ForeignKey("products.product_id"), nullable=False
     )

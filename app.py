@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, make_response
 from utils.data_reader import read_json
-from utils.db_tools import fill_db
 from os import path
 from models.db import db, Users, Product, Basket
 

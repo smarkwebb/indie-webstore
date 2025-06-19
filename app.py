@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, make_response
 from utils.data_reader import read_json
 from utils.db_tools import fill_db
-from models.db import db, Users, Product, Link, Basket
+from models.db import db, Users, Product, Basket
 
 
 app = Flask(__name__)
@@ -22,6 +22,25 @@ def route_index():
 def route_product(product_id):
     products = Product.query.all()
     return render_template("product.html", product=products[product_id - 1])
+
+
+@app.route("/added", methods=["GET", "POST"])
+def add_to_cart():
+    if request.method == "POST":
+        user_id = request.cookies.get("user")
+        product_id = request.form["product_id"]
+        quantity = request.form["quantity"]
+
+        with app.app_context():
+            if not user_id:
+                resp = make_response("You must be logged in to perform this action.")
+            else:
+                db.session.add(
+                    Basket(user_id=user_id, product_id=product_id, quantity=quantity)
+                )
+                resp = make_response("Added to cart.")
+                db.session.commit()
+    return resp
 
 
 @app.route("/basket")

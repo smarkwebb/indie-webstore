@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, make_response
 from utils.data_reader import read_json
 from utils.db_tools import fill_db
 from models.db import db, Users, Product, Link, Basket
@@ -37,6 +37,24 @@ def route_checkout():
 @app.route("/account")
 def route_account():
     return render_template("account.html")
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if (
+        request.method == "POST"
+        and "username" in request.form
+        and "password" in request.form
+    ):
+        username = request.form["username"]
+        password = request.form["password"]
+
+        with app.app_context():
+            db.session.add(Users(username=username, password=password))
+            db.session.commit()
+
+        resp = make_response("Logged in.")
+    return resp
 
 
 if __name__ == "__main__":

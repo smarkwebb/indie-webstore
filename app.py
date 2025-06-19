@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, make_response
 from utils.data_reader import read_json
 from utils.db_tools import fill_db
+from os import path
 from models.db import db, Users, Product, Basket
 
 
@@ -8,8 +9,18 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.sqlite3"
 db.init_app(app)
 
+
 with app.app_context():
-    fill_db(read_json("./data/products.json"), Product)
+    db.create_all()
+    products = read_json("data/products.json")
+
+    for product in products:
+        query = Product.query.filter_by(**product).first()
+
+        if not query:
+            db.session.add(Product(**product))
+
+    db.session.commit()
 
 
 @app.route("/")

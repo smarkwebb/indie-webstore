@@ -61,5 +61,27 @@ def register():
     return resp
 
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if (
+        request.method == "POST"
+        and "username" in request.form
+        and "password" in request.form
+    ):
+        username = request.form["username"]
+        password = request.form["password"]
+
+        with app.app_context():
+            user = Users.query.filter_by(username=username).first()
+
+            if not user:
+                resp = make_response("User does not exist.")
+            elif user.password == password:
+                resp = make_response("Welcome User!")
+            else:
+                resp = make_response("Invalid username or password.")
+        return resp
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8000)

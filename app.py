@@ -78,7 +78,7 @@ def login():
                 resp = make_response("User does not exist.")
             elif user.password == password:
                 resp = make_response("Welcome User!")
-                resp.set_cookie("username", username)
+                resp.set_cookie("user", str(user.user_id))
             else:
                 resp = make_response("Invalid username or password.")
         return resp

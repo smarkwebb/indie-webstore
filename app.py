@@ -68,7 +68,7 @@ def route_basket():
     total_price = 0
 
     for basket in baskets:
-        total_price += basket.price
+        total_price += basket.price * basket.quantity
 
     return render_template(
         "basket.html", baskets=baskets, products=products, total_price=total_price
@@ -82,6 +82,20 @@ def remove_from_cart():
         my_basket = db.session.get(Basket, basket_id)
         db.session.delete(my_basket)
         resp = make_response("Removed from cart.")
+        db.session.commit()
+    return resp
+
+
+@app.route("/removed_all", methods=["GET", "POST"])
+def remove_all_from_cart():
+    if request.method == "POST":
+        user = request.cookies.get("user")
+        baskets = Basket.query.filter_by(user_id=user)
+
+        for basket in baskets:
+            db.session.delete(basket)
+
+        resp = make_response("Removed all items from cart")
         db.session.commit()
     return resp
 

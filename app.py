@@ -27,6 +27,20 @@ def route_index():
     return render_template("index.html", products=products)
 
 
+@app.route("/sort_by/<sort_by>")
+def sort_by(sort_by):
+    if sort_by == "name":
+        products = Product.query.order_by(Product.name).all()
+    elif sort_by == "price":
+        products = Product.query.order_by(Product.price).all()
+    elif sort_by == "env_impact":
+        products = Product.query.order_by(Product.env_impact).all()
+    else:
+        products = Product.query.all()
+
+    return render_template("index.html", products=products)
+
+
 @app.route("/product/<int:product_id>")
 def route_product(product_id):
     products = Product.query.all()

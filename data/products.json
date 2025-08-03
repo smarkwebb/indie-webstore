@@ -1,34 +1,50 @@
 [
     {
-        "name": "Item 1",
-        "textual_description": "Sample item 1 textual",
-        "full_description": "Sample item 1 full",
-        "image_path": "static/item1.png",
-        "price": "1.99",
-        "env_impact": "Low"
-    },
-    {
-        "name": "Item 2",
-        "textual_description": "Sample item 2 textual",
-        "full_description": "Sample item 2 full",
-        "image_path": "static/item2.png",
-        "price": "2.99",
+        "name": "Balatro",
+        "textual_description": "Balatro is a thrilling poker roguelike deckbuilder with illegal hands, powerful jokers, and explosive combos.",
+        "full_description": "The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.",
+        "image_path": "static/posters/balatro.jpg",
+        "price": "12.79",
         "env_impact": "Medium"
     },
     {
-        "name": "Item 3",
-        "textual_description": "Sample item 3 textual",
-        "full_description": "Sample item 3 full",
-        "image_path": "static/item3.png",
-        "price": "5.99",
-        "env_impact": "High"
+        "name": "Celeste",
+        "textual_description": "Brave hundreds of hand-crafted challenges and uncover devious secrets as you help Madeline survive her inner demons on her journey to the top of Celeste Mountain in this super-tight platformer.",
+        "full_description": "Help Madeline survive her inner demons on her journey to the top of Celeste Mountain, in this super-tight platformer from the creators of TowerFall. Brave hundreds of hand-crafted challenges, uncover devious secrets, and piece together the mystery of the mountain.",
+        "image_path": "static/posters/celeste.jpg",
+        "price": "16.75",
+        "env_impact": "Medium"
     },
     {
-        "name": "Item 4",
-        "textual_description": "Sample item 4 textual",
-        "full_description": "Sample item 4 full",
-        "image_path": "static/item4.png",
+        "name": "Hades",
+        "textual_description": "Defy the god of the dead in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre, as you hack and slash your way out of the Underworld.",
+        "full_description": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre.",
+        "image_path": "static/posters/hades.jpg",
+        "price": "20.99",
+        "env_impact": "Medium"
+    },
+    {
+        "name": "Hollow Knight",
+        "textual_description": "Forge your own path through twisting caverns and battle tainted creatures in Hollow Knight, an epic hand-drawn 2D action-adventure set in a vast ruined kingdom of insects and heroes.",
+        "full_description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.",
+        "image_path": "static/posters/hollow_knight.jpg",
+        "price": "12.95",
+        "env_impact": "Medium"
+    },
+    {
+        "name": "Stardew Valley",
+        "textual_description": "Armed with hand-me-down tools and a few coins, you inherit your grandfather's old farm plot in Stardew Valley, setting out to learn to live off the land and turn overgrown fields into a thriving home.",
+        "full_description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+        "image_path": "static/posters/stardew_valley.jpg",
         "price": "10.99",
-        "env_impact": "Very High"
+        "env_impact": "Medium"
+    },
+    {
+        "name": "Terraria",
+        "textual_description": "Dig, fight, explore, and build anything imaginable in this action-packed adventure game, also available in a four-pack to share with friends.",
+        "full_description": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
+        "image_path": "static/posters/terraria.jpg",
+        "price": "8.50",
+        "env_impact": "Medium"
     }
 ]

@@ -1,13 +1,17 @@
 {% extends "base.html" %} {% block content %}
 <div class="container">
+    <h3>Sort by: </h3>
+    <a href={{url_for('sort_by', sort_by="name")}}>Name</a>
+    <a href={{url_for('sort_by', sort_by="price")}}>Price</a>
+    <a href={{url_for('sort_by', sort_by="env_impact")}}>Env Impact</a>
     {% for product in products %}
     <div class="row">
         <div class="col-sm-6">
             <h1>{{product.name}}</h1>
-            <a href={{url_for('route_product', product_id=product.product_id)}}><img src={{product.image_path}}></a>
+            <a href={{url_for('route_product', product_id=product.product_id)}}><img style="max-width:300px" src={{url_for('static', filename=product.image_path)}}></a>
             <p>{{product.textual_description}}</p>
             <h2>£{{product.price}}</h2>
-            <h3>{{product.env_impact}}</h3>
+            <h3>Env impact: {{product.env_impact}}</h3>
             <form action="/added" method="post">
                 <input type="hidden" name="product_id" value={{product.product_id}}>
                 <input type="hidden" name="name" value={{product.name}}>

@@ -2,11 +2,11 @@
 <div class="container">
     {% for product in products %}
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-6">
             <h1>{{product.name}}</h1>
             <a href={{url_for('route_product', product_id=product.product_id)}}><img src={{product.image_path}}></a>
-            <p>{{product.description}}</p>
-            <h2>{{product.price}}</h2>
+            <p>{{product.textual_description}}</p>
+            <h2>£{{product.price}}</h2>
             <h3>{{product.impact}}</h3>
             <form action="/added" method="post">
                 <input type="hidden" name="product_id" value={{product.product_id}}>

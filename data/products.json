@@ -1,28 +1,32 @@
 [
     {
         "name": "Item 1",
-        "description": "Sample item 1",
+        "textual_description": "Sample item 1 textual",
+        "full_description": "Sample item 1 full",
         "image_path": "static/item1.png",
         "price": "1.99",
         "env_impact": "Low"
     },
     {
         "name": "Item 2",
-        "description": "Sample item 2",
+        "textual_description": "Sample item 2 textual",
+        "full_description": "Sample item 2 full",
         "image_path": "static/item2.png",
         "price": "2.99",
         "env_impact": "Medium"
     },
     {
         "name": "Item 3",
-        "description": "Sample item 3",
+        "textual_description": "Sample item 3 textual",
+        "full_description": "Sample item 3 full",
         "image_path": "static/item3.png",
         "price": "5.99",
         "env_impact": "High"
     },
     {
         "name": "Item 4",
-        "description": "Sample item 4",
+        "textual_description": "Sample item 4 textual",
+        "full_description": "Sample item 4 full",
         "image_path": "static/item4.png",
         "price": "10.99",
         "env_impact": "Very High"

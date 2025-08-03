@@ -2,11 +2,11 @@
 <div class="container">
     {% for basket in baskets %}
     <div class="row">   
-        <div class="col-sm-6">
+        <div class="col-sm-8">
             <h1>{{basket.name}}</h1>
             <h2>£{{basket.price}}</h2>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <p>Quantity: {{basket.quantity}}</p>
             <form action="/removed" method="post">
                 <input type="hidden" name="basket_id" value={{basket.basket_id}}>

@@ -1,17 +1,24 @@
 {% extends "base.html" %} {% block content %}
-<form action="/register" , method="post">
-    <label for="username">Username:</label><br />
-    <input type="text" id="username" name="username" /><br />
-    <label for="password">Password:</label><br />
-    <input type="text" id="password" name="password" /><br />
-    <input type="submit" value="Register" />
-</form>
-
-<form action="/login" , method="post">
-    <label for="username">Username:</label><br />
-    <input type="text" id="username" name="username" /><br />
-    <label for="password">Password:</label><br />
-    <input type="text" id="password" name="password" /><br />
-    <input type="submit" value="Login" />
-    {% endblock %}
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <form action="/register" , method="post">
+                <label for="username">Username:</label><br />
+                <input type="text" id="username" name="username" /><br />
+                <label for="password">Password:</label><br />
+                <input type="text" id="password" name="password" /><br />
+                <input type="submit" value="Register" />
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <form action="/login" , method="post">
+                <label for="username">Username:</label><br />
+                <input type="text" id="username" name="username" /><br />
+                <label for="password">Password:</label><br />
+                <input type="text" id="password" name="password" /><br />
+                <input type="submit" value="Login" />
+                {% endblock %}
+            </form>
+        </div>
+    </div>
+</div>

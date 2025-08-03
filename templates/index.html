@@ -7,7 +7,7 @@
             <a href={{url_for('route_product', product_id=product.product_id)}}><img src={{product.image_path}}></a>
             <p>{{product.textual_description}}</p>
             <h2>£{{product.price}}</h2>
-            <h3>{{product.impact}}</h3>
+            <h3>{{product.env_impact}}</h3>
             <form action="/added" method="post">
                 <input type="hidden" name="product_id" value={{product.product_id}}>
                 <input type="hidden" name="name" value={{product.name}}>

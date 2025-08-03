@@ -1,50 +1,90 @@
 [
     {
-        "name": "Balatro",
+        "name": "Balatro (Physical Disc)",
         "textual_description": "Balatro is a thrilling poker roguelike deckbuilder with illegal hands, powerful jokers, and explosive combos.",
         "full_description": "The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.",
-        "image_path": "static/posters/balatro.jpg",
+        "image_path": "posters/balatro.jpg",
         "price": "12.79",
-        "env_impact": "Medium"
+        "env_impact": "2 (Medium)"
     },
     {
-        "name": "Celeste",
+        "name": "Celeste (Physical Disc)",
         "textual_description": "Brave hundreds of hand-crafted challenges and uncover devious secrets as you help Madeline survive her inner demons on her journey to the top of Celeste Mountain in this super-tight platformer.",
         "full_description": "Help Madeline survive her inner demons on her journey to the top of Celeste Mountain, in this super-tight platformer from the creators of TowerFall. Brave hundreds of hand-crafted challenges, uncover devious secrets, and piece together the mystery of the mountain.",
-        "image_path": "static/posters/celeste.jpg",
+        "image_path": "posters/celeste.jpg",
         "price": "16.75",
-        "env_impact": "Medium"
+        "env_impact": "2 (Medium)"
     },
     {
-        "name": "Hades",
+        "name": "Hades (Physical Disc)",
         "textual_description": "Defy the god of the dead in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre, as you hack and slash your way out of the Underworld.",
         "full_description": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre.",
-        "image_path": "static/posters/hades.jpg",
+        "image_path": "posters/hades.jpg",
         "price": "20.99",
-        "env_impact": "Medium"
+        "env_impact": "2 (Medium)"
     },
     {
-        "name": "Hollow Knight",
+        "name": "Hollow Knight (Physical Disc)",
         "textual_description": "Forge your own path through twisting caverns and battle tainted creatures in Hollow Knight, an epic hand-drawn 2D action-adventure set in a vast ruined kingdom of insects and heroes.",
         "full_description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.",
-        "image_path": "static/posters/hollow_knight.jpg",
+        "image_path": "posters/hollow_knight.jpg",
         "price": "12.95",
-        "env_impact": "Medium"
+        "env_impact": "2 (Medium)"
     },
     {
-        "name": "Stardew Valley",
+        "name": "Stardew Valley (Physical Disc)",
         "textual_description": "Armed with hand-me-down tools and a few coins, you inherit your grandfather's old farm plot in Stardew Valley, setting out to learn to live off the land and turn overgrown fields into a thriving home.",
         "full_description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
-        "image_path": "static/posters/stardew_valley.jpg",
+        "image_path": "posters/stardew_valley.jpg",
         "price": "10.99",
-        "env_impact": "Medium"
+        "env_impact": "2 (Medium)"
     },
     {
-        "name": "Terraria",
+        "name": "Terraria (Physical Disc)",
         "textual_description": "Dig, fight, explore, and build anything imaginable in this action-packed adventure game, also available in a four-pack to share with friends.",
         "full_description": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
-        "image_path": "static/posters/terraria.jpg",
+        "image_path": "posters/terraria.jpg",
         "price": "8.50",
-        "env_impact": "Medium"
+        "env_impact": "2 (Medium)"
+    },
+    {
+        "name": "Balatro Playing Cards",
+        "textual_description": "This deck features 52 linen-finish playing cards and four unique Jokers—Joker, Juggler, Blueprint, and Gros Michel—all based on LocalThunk's in-game designs and packed in a silver foil-accented tuck box.",
+        "full_description": "This deck of linen-finish cards, based on LocalThunk’s original in-game designs, includes 52 standard playing cards as well as four Jokers: Joker, Juggler, Blueprint, and Gros Michel. It's packed in a tuck box accented with silver foil.",
+        "image_path": "posters/balatro_playing_cards.jpg",
+        "price": "16.00",
+        "env_impact": "1 (Low)"
+    },
+    {
+        "name": "Celeste Desk Mat",
+        "textual_description": "This official Celeste desk mat was designed by Ian Wilding. It measures 35x16 inches across, with a 3 mm rubber backing.",
+        "full_description": "This official Celeste desk mat was designed by Ian Wilding. It measures 35x16 inches across, with a 3 mm rubber backing.",
+        "image_path": "posters/celeste_desk_mat.jpg",
+        "price": "28.00",
+        "env_impact": "3 (High)"
+    },
+    {
+        "name": "Hades Desk Mat",
+        "textual_description": "This official Hades desk mat, designed by Adam Rufino and Jon Kay, measures 35 x 16 inches with a 4mm rubber backing, perfect for all your work or procrastination needs.",
+        "full_description": "This official Hades desk mat was designed by Adam Rufino and Jon Kay and is suitable for all your work/procrastination-related materials. It measures 35 x 16 inches across, with a 4mm rubber backing.",
+        "image_path": "posters/hades_desk_mat.jpg",
+        "price": "28.00",
+        "env_impact": "3 (High)"
+    },
+    {
+        "name": "Hollow Knight Desk Mat",
+        "textual_description": "This official Hollow Knight desk mat, designed by Ikuno Ohashi, measures 35x16 inches and features a 3 mm rubber backing.",
+        "full_description": "This official Hollow Knight desk mat was designed by Ikuno Ohashi.  It measures 35x16 inches across, with a 3 mm rubber backing.",
+        "image_path": "posters/hollow_knight_desk_mat.jpg",
+        "price": "28.00",
+        "env_impact": "3 (High)"
+    },
+    {
+        "name": "Stardew Valley Guidebook",
+        "textual_description": "This 300-page guide to Stardew Valley is packed with hundreds of illustrations and useful gossip about your new hometown and its residents.",
+        "full_description": "Its 300 pages feature hundreds of illustrations and tons of useful gossip about your new hometown and all the people in it, including: Up-to-date info on 8-player multiplayer, the Desert Festival, Mystery Boxes, special furniture catalogues, skill mastery, and loads of other new and updated content. All the content you know and love from the past 8 years of Stardew Valley updates. Gift preferences for a host of potential friends and more-than-friends. A look at all the crops, tools, animals, and facts of farm life you'll need to become an agricultural expert. Everything you need to know to survive in the Mines and Skull Cavern. At least one section titled A Guide to Wooing and Marriage. A handy database in the back filled with information you'll want to keep close at hand.",
+        "image_path": "posters/stardew_valley_desk_mat.jpg",
+        "price": "28.00",
+        "env_impact": "3 (High)"
     }
 ]

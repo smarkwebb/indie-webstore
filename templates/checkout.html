@@ -1,1 +1,23 @@
-{% extends "base.html" %} {% block content %} {% endblock %}
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <div class="row">
+            <div class="col-sm-6">
+                <form action="/validated" method="post">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name">
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname" id="surname">
+                    <label for="card_number">Credit Card Number</label>
+                    <input type="text" name="card_number" id="card_number">
+                    <label for="security_code">Security Code</label>
+                    <input type="text" name="security_code" id="security_code">
+                    <label for="exp_month">Expiration Month</label>
+                    <input type="text" name="exp_month" id="exp_month">
+                    <label for="exp_year">Expiration Year</label>
+                    <input type="text" name="exp_year" id="exp_year">
+                    <input type="submit" name="submit" value="Pay Now">
+                </form>
+        </div>
+    </div>
+</div>
+ {% endblock %}

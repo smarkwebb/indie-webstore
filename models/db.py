@@ -15,7 +15,8 @@ class Product(db.Model):
     __tablename__ = "products"
     product_id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), nullable=False)
-    description = db.Column(db.String(500))
+    textual_description = db.Column(db.String(500))
+    full_description = db.Column(db.String(500))
     image_path = db.Column(db.String(20))
     price = db.Column(db.Float)
     env_impact = db.Column(db.String(20))
@@ -28,4 +29,6 @@ class Basket(db.Model):
     product_id = db.Column(
         db.Integer, db.ForeignKey("products.product_id"), nullable=False
     )
+    name = db.Column(db.String(120), nullable=False)
+    price = db.Column(db.Float)
     quantity = db.Column(db.Integer)

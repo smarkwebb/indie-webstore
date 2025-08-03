@@ -18,7 +18,6 @@ with app.app_context():
 
         if not query:
             db.session.add(Product(**product))
-
     db.session.commit()
 
 
@@ -39,6 +38,8 @@ def add_to_cart():
     if request.method == "POST":
         user_id = request.cookies.get("user")
         product_id = request.form["product_id"]
+        name = request.form["name"]
+        price = request.form["price"]
         quantity = request.form["quantity"]
 
         with app.app_context():
@@ -46,7 +47,13 @@ def add_to_cart():
                 resp = make_response("You must be logged in to perform this action.")
             else:
                 db.session.add(
-                    Basket(user_id=user_id, product_id=product_id, quantity=quantity)
+                    Basket(
+                        user_id=user_id,
+                        product_id=product_id,
+                        name=name,
+                        price=price,
+                        quantity=quantity,
+                    )
                 )
                 resp = make_response("Added to cart.")
                 db.session.commit()
@@ -55,7 +62,28 @@ def add_to_cart():
 
 @app.route("/basket")
 def route_basket():
-    return render_template("basket.html")
+    user = request.cookies.get("user")
+    baskets = Basket.query.filter_by(user_id=user)
+    products = Product.query.all()
+    total_price = 0
+
+    for basket in baskets:
+        total_price += basket.price
+
+    return render_template(
+        "basket.html", baskets=baskets, products=products, total_price=total_price
+    )
+
+
+@app.route("/removed", methods=["GET", "POST"])
+def remove_from_cart():
+    if request.method == "POST":
+        basket_id = request.form["basket_id"]
+        my_basket = db.session.get(Basket, basket_id)
+        db.session.delete(my_basket)
+        resp = make_response("Removed from cart.")
+        db.session.commit()
+    return resp
 
 
 @app.route("/checkout")

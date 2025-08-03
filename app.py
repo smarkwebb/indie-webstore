@@ -105,6 +105,49 @@ def route_checkout():
     return render_template("checkout.html")
 
 
+@app.route("/validated", methods=["GET", "POST"])
+def validate_checkout():
+    if request.method == "POST":
+        first_name = request.form.get("first_name", "").strip()
+        surname = request.form.get("surname", "").strip()
+        card_number = request.form.get("card_number", "").strip()
+        security_code = request.form.get("security_code", "").strip()
+        exp_month = request.form.get("exp_month", "").strip()
+        exp_year = request.form.get("exp_year", "").strip()
+
+        if any(
+            x == ""
+            for x in [
+                first_name,
+                surname,
+                card_number,
+                security_code,
+                exp_month,
+                exp_year,
+            ]
+        ):
+            return make_response("Fields cannot be empty.")
+
+        clean_card_number = card_number.replace("-", "").replace(" ", "")
+
+        if not clean_card_number.isdigit():
+            return make_response("Card number must contain only numbers.")
+
+        if len(clean_card_number) != 12:
+            return make_response("Card number must be be 12 digits.")
+
+        if not security_code.isdigit():
+            return make_response("Security code must only contain numbers.")
+
+        if not exp_month.isdigit():
+            return make_response("Expiry month must only contain numbers.")
+
+        if not exp_year.isdigit():
+            return make_response("Expiry year must only contain numbers.")
+
+        return make_response("Payment processed successfully!")
+
+
 @app.route("/account")
 def route_account():
     return render_template("account.html")
